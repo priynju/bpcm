@@ -658,6 +658,33 @@ a.btn:not([href]):not([tabindex]):hover {
     border-radius: 0
 }
 
+.container {
+    padding-top: 5px
+}
+
+.row-striped:nth-of-type(odd) {
+    background-color: #efefef;
+    border-left: 10px solid #cd3333
+}
+
+.row-striped:nth-of-type(even) {
+    background-color: #fff;
+    border-left: 15px solid #efefef
+}
+
+.row-striped {
+    padding: 15px 0;
+    margin-top: 15px
+}
+
+.date-green {
+    background-color: #cd3333
+}
+
+.badge-grey {
+    background-color: #efefef
+}
+
 #footerpad {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -1005,8 +1032,7 @@ div.social-links {
     flex-wrap: wrap;
     max-height: 430px;
     padding: 26px;
-    overflow: auto;
-    scroll-behavior: auto
+    overflow: hidden
 }
 
 .hrz-txt-scroll p {
