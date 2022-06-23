@@ -36,7 +36,7 @@
                         <div class="dropdown-menu"><a class="dropdown-item" href="#">Overview</a><a class="dropdown-item" href="#">Vision</a><a class="dropdown-item" href="#">Particulars</a><a class="dropdown-item" href="#">Reports</a></div>
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Team</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">HM's Desk</a><a class="dropdown-item" href="faculties.html">Faculties</a><a class="dropdown-item" href="managing-body.html">Managing Body</a></div>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="hm-desk.html">HM's Desk</a><a class="dropdown-item" href="faculties.html">Faculties</a><a class="dropdown-item" href="managing-body.html">Managing Body</a></div>
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Campus</a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="#">Environment</a><a class="dropdown-item" href="#">Facilities</a><a class="dropdown-item" href="#">Boarding</a></div>
@@ -187,9 +187,9 @@
         <div class="row">
             <div class="col-md-6" style="width: 440px;padding: 0px 12px;max-height: 630px;">
                 <section style="padding-top: 48px;padding-bottom: 48px;">
-                    <h1 class="text-center" style="border-radius: 12px;color: rgb(68,68,68);padding: 0px;">Announcements</h1>
+                    <h1 class="text-center" style="border-radius: 12px;color: rgb(68,68,68);padding: 0px;margin-bottom: 48px;">Announcements</h1>
                     <div id="hrz-txt-scroll">
-                        <marquee direction="up">
+                        <div class="moving-text">
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <h1>Heading</h1>
@@ -208,8 +208,38 @@
                                     <p>Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus.</p>
                                 </li>
                             </ul>
-                        </marquee>
+                        </div>
                     </div>
+
+                    <style>
+                        /* Makes the animation pause on hover */
+                        
+                        .moving-text:hover {
+                            animation-play-state: paused;
+                        }
+                        /* The animation */
+                        
+                        @keyframes marquee {
+                            0% {
+                                transform: translateY(100%);
+                            }
+                            100% {
+                                transform: translateY(-100%);
+                            }
+                        }
+                        /* media query to enable animation for only those who want it */
+                        
+                        @media (prefers-reduced-motion: no-preference) {
+                            .moving-text {
+                                animation: marquee 7s linear infinite;
+                            }
+                        }
+                    </style>
+
+                    <!--  
+<marquee direction = "up" scrollamount="10" onmouseover="this.stop();" onmouseout="this.start();">
+</marquee>
+-->
                 </section>
             </div>
             <div class="col-md-6" style="width: 880px;">
@@ -218,7 +248,6 @@
                         <div class="row mb-5">
                             <div class="col-md-8 col-xl-6 text-center mx-auto">
                                 <h2>Gallery</h2>
-                                <p class="w-lg-50">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
                             </div>
                         </div>
                         <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox="">
@@ -235,10 +264,19 @@
                                 <a href="https://picsum.photos/id/259/1400/800.webp"><img class="img-fluid" src="https://picsum.photos/id/259/1400/800.webp"></a>
                             </div>
                             <div class="col item">
-                                <a href="https://picsum.photos/id/799/1400/800.webp"><img class="img-fluid" src="https://picsum.photos/id/799/1400/800.webp"></a>
+                                <a href="https://picsum.photos/id/229/1400/800.webp"><img class="img-fluid" src="https://picsum.photos/id/229/1400/800.webp"></a>
                             </div>
                             <div class="col item">
                                 <a href="https://picsum.photos/id/399/1400/800.webp"><img class="img-fluid" src="https://picsum.photos/id/399/1400/800.webp"></a>
+                            </div>
+                            <div class="col item">
+                                <a href="https://picsum.photos/id/259/1400/800.webp"><img class="img-fluid" src="https://picsum.photos/id/259/1400/800.webp"></a>
+                            </div>
+                            <div class="col item">
+                                <a href="https://picsum.photos/id/399/1400/800.webp"><img class="img-fluid" src="https://picsum.photos/id/399/1400/800.webp"></a>
+                            </div>
+                            <div class="col item">
+                                <a href="https://picsum.photos/id/799/1400/800.webp"><img class="img-fluid" src="https://picsum.photos/id/799/1400/800.webp"></a>
                             </div>
                         </div>
                     </div>
